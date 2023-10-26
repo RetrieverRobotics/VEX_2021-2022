@@ -4,17 +4,17 @@ bool DriverControl::ArmToggle = true;
 
 void DriverControl::ArmPress(){
   // fourBar.rotateTo(ArmToggle ? 12*7 : 120*7, degrees, 75, velocityUnits::pct, false);
-  fourBar.rotateTo(ArmToggle ? 11*7 : 120*7, degrees, 75, velocityUnits::pct, false);
+  fourBar.spinTo(ArmToggle ? 11*7 : 120*7, degrees, 75, velocityUnits::pct, false);
   ArmToggle = !ArmToggle;
 }
 
 void DriverControl::armsLight() {
   // fourBar.rotateTo(12*7, degrees, 75, velocityUnits::pct, false);
-  fourBar.rotateTo(11*7, degrees, 75, velocityUnits::pct, false);
+  fourBar.spinTo(11*7, degrees, 75, velocityUnits::pct, false);
 }
 
 void DriverControl::armDown() {
-  fourBar.rotateTo(0, degrees, 75, velocityUnits::pct, false);
+  fourBar.spinTo(0, degrees, 75, velocityUnits::pct, false);
 }
 
 bool DriverControl::ClawToggle = true;
@@ -28,12 +28,12 @@ bool DriverControl::Claw4Toggle = false;
 
 void DriverControl::Claw4Press() {
   // Claw4.rotateTo(Claw4Toggle ? -6*3 : 100*3, deg, 100, velocityUnits::pct, false);
-  Claw4.rotateTo(Claw4Toggle ? -7*3 : 100*3, deg, 100, velocityUnits::pct, false);
+  Claw4.spinTo(Claw4Toggle ? -7*3 : 100*3, deg, 100, velocityUnits::pct, false);
   Claw4Toggle = !Claw4Toggle;
 }
 
 void claw4Close() {
-  Claw4.rotateFor(-2*7, deg, 100, velocityUnits::pct, false);
+  Claw4.spinFor(-2*7, deg, 100, velocityUnits::pct, false);
 }
 
 void DriverControl::Run() {

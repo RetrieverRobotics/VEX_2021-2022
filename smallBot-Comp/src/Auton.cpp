@@ -324,7 +324,7 @@ void matchAuton() {
   // wait(10, msec);
   // wait(500, msec);
   //Lock the claw by lifting four bar
-  fourBar.rotateFor(fwd, 15*7, deg, 100, velocityUnits::pct);
+  fourBar.spinFor(fwd, 15*7, deg, 100, velocityUnits::pct);
 
   //Drive Backwards towards plat
   // LDrive_Group.rotateFor(-1050*GEAR_RATIO, degrees, 80, velocityUnits::pct, false);
@@ -502,8 +502,8 @@ void BenMatch() {
   RDrive_Group.resetPosition();
 
   //Drive Forward, Lift 4bar, open claw
-  LDrive_Group.rotateFor(1300*GEAR_RATIO, degrees, 100, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(1300*GEAR_RATIO, degrees, 100, velocityUnits::pct);
+  LDrive_Group.spinFor(1300*GEAR_RATIO, degrees, 100, velocityUnits::pct, false);
+  RDrive_Group.spinFor(1300*GEAR_RATIO, degrees, 100, velocityUnits::pct);
   // fourBar.rotateFor(5*3, degrees, 75, velocityUnits::pct, false);
   // // R4bar.rotateFor(5*3, degrees, 75, velocityUnits::pct, false);
   // // L4bar.rotateFor(5*3, degrees, 75, velocityUnits::pct, false);
@@ -513,40 +513,40 @@ void BenMatch() {
   wait(500, msec);
 
   //Drive forward slower
-  LDrive_Group.rotateFor(125*GEAR_RATIO, degrees, 50, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(125*GEAR_RATIO, degrees, 50, velocityUnits::pct);
+  LDrive_Group.spinFor(125*GEAR_RATIO, degrees, 50, velocityUnits::pct, false);
+  RDrive_Group.spinFor(125*GEAR_RATIO, degrees, 50, velocityUnits::pct);
   wait(250, msec);
 
   //Clamp claw on goal
-  Claw4.rotateTo(10*3, degrees, 75, velocityUnits::pct);
+  Claw4.spinTo(10*3, degrees, 75, velocityUnits::pct);
   wait(500, msec);
 
   //Drive Backwards towards plat
-  LDrive_Group.rotateFor(-1050*GEAR_RATIO, degrees, 80, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-1050*GEAR_RATIO, degrees, 80, velocityUnits::pct);
+  LDrive_Group.spinFor(-1050*GEAR_RATIO, degrees, 80, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-1050*GEAR_RATIO, degrees, 80, velocityUnits::pct);
 
   //Turn for drop off
-  LDrive_Group.rotateFor(300*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-300*GEAR_RATIO, degrees, 40, velocityUnits::pct);
-  LDrive_Group.rotateFor(250*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(250*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(300*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-300*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(250*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(250*GEAR_RATIO, degrees, 40, velocityUnits::pct);
 
   //Let go of goal
-  Claw4.rotateTo(-100*3, degrees, 75, velocityUnits::pct);
-  LDrive_Group.rotateFor(-250*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-250*GEAR_RATIO, degrees, 40, velocityUnits::pct);
-  LDrive_Group.rotateFor(-300*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(300*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  Claw4.spinTo(-100*3, degrees, 75, velocityUnits::pct);
+  LDrive_Group.spinFor(-250*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-250*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-300*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(300*GEAR_RATIO, degrees, 40, velocityUnits::pct);
 
   //Drive backwards towards plat
-  LDrive_Group.rotateFor(-350*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-350*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-350*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-350*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   //Turn towards goal on plat
-  LDrive_Group.rotateFor(-300*GEAR_RATIO, degrees, 50, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(300*GEAR_RATIO, degrees, 50, velocityUnits::pct);
+  LDrive_Group.spinFor(-300*GEAR_RATIO, degrees, 50, velocityUnits::pct, false);
+  RDrive_Group.spinFor(300*GEAR_RATIO, degrees, 50, velocityUnits::pct);
   //Drive into goal/ plat
-  LDrive_Group.rotateFor(-650*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-650*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-650*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-650*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   wait(500, msec);
 
   //Grab goal with pneumatics
@@ -554,42 +554,42 @@ void BenMatch() {
   wait(500, msec);
 
   //Drive backwards towards side wall
-  LDrive_Group.rotateFor(500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
 
   //Run conveyor to score preloads
-  Conveyor.rotateFor(5000, deg, 100, velocityUnits::pct);
+  Conveyor.spinFor(5000, deg, 100, velocityUnits::pct);
 
   //Close 4barClaw
-  Claw4.rotateTo(0, degrees, 75, velocityUnits::pct);
+  Claw4.spinTo(0, degrees, 75, velocityUnits::pct);
 
   //Drive Backwards for wall reset
   TDrive_Group.spinFor(2000, msec, 40, velocityUnits::pct);
 
   //Drive Off Wall Slightly
-  LDrive_Group.rotateFor(-200*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-200*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-200*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-200*GEAR_RATIO, degrees, 40, velocityUnits::pct);
 
   //Turn 90 to have 4bar facing opposing side
-  LDrive_Group.rotateFor(-300*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(300*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-300*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(300*GEAR_RATIO, degrees, 40, velocityUnits::pct);
 
   //Drive Towards Opposing Side
-  LDrive_Group.rotateFor(-900*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-900*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-900*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-900*GEAR_RATIO, degrees, 40, velocityUnits::pct);
 
   //Turn 90 to face rings
-  LDrive_Group.rotateFor(-280*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(280*GEAR_RATIO, degrees, 40, velocityUnits::pct,false);
-  fourBar.rotateFor(100*3, degrees, 75, velocityUnits::pct);
+  LDrive_Group.spinFor(-280*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(280*GEAR_RATIO, degrees, 40, velocityUnits::pct,false);
+  fourBar.spinFor(100*3, degrees, 75, velocityUnits::pct);
   // R4bar.rotateFor(100*3, degrees, 75, velocityUnits::pct, false);
   // L4bar.rotateFor(100*3, degrees, 75, velocityUnits::pct);
   wait(500, msec);
 
   //Drive forward and collect Rings
-  Conveyor.rotateFor(10000, deg, 100, velocityUnits::pct,false);
-  LDrive_Group.rotateFor(1200*GEAR_RATIO, degrees, 30, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(1200*GEAR_RATIO, degrees, 30, velocityUnits::pct);
+  Conveyor.spinFor(10000, deg, 100, velocityUnits::pct,false);
+  LDrive_Group.spinFor(1200*GEAR_RATIO, degrees, 30, velocityUnits::pct, false);
+  RDrive_Group.spinFor(1200*GEAR_RATIO, degrees, 30, velocityUnits::pct);
   wait(2000, msec);
 
   //Drop Goal
@@ -600,92 +600,92 @@ void BenMatch() {
 void skillsAuton() {
   wait(8000, msec);
   //Drive into goal
-  LDrive_Group.rotateFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   wait(500, msec);
   //Pickup GOal
   Claw.set(true);
   wait(500, msec);
   //Drive Back
-  LDrive_Group.rotateFor(470*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(470*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(470*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(470*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   //Turn 90
-  LDrive_Group.rotateFor(305*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-305*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(305*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-305*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   //Drive Towards Yellow Goal
-  LDrive_Group.rotateFor(1400*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(1400*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  fourBar.rotateFor(5*3, degrees, 75, velocityUnits::pct, false);
+  LDrive_Group.spinFor(1400*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(1400*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  fourBar.spinFor(5*3, degrees, 75, velocityUnits::pct, false);
   // R4bar.rotateFor(5*3, degrees, 75, velocityUnits::pct, false);
   // L4bar.rotateFor(5*3, degrees, 75, velocityUnits::pct, false);
-  Claw4.rotateTo(-100*3, degrees, 75, velocityUnits::pct);
-  Claw4.rotateTo(-100*3, degrees, 75, velocityUnits::pct);
+  Claw4.spinTo(-100*3, degrees, 75, velocityUnits::pct);
+  Claw4.spinTo(-100*3, degrees, 75, velocityUnits::pct);
   wait(1000, msec);
   //Close Claw grab goal
-  Claw4.rotateTo(10*3, degrees, 75, velocityUnits::pct);
+  Claw4.spinTo(10*3, degrees, 75, velocityUnits::pct);
   wait(500, msec);
   //Lift 4bar
-  fourBar.rotateFor(50*7, degrees, 75, velocityUnits::pct);
+  fourBar.spinFor(50*7, degrees, 75, velocityUnits::pct);
   // R4bar.rotateFor(50*7, degrees, 75, velocityUnits::pct, false);
   // L4bar.rotateFor(50*7, degrees, 75, velocityUnits::pct);
   //Drive Forward 
-  LDrive_Group.rotateFor(800*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(800*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(800*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(800*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   //Turn 90
-  LDrive_Group.rotateFor(270*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-270*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(270*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-270*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   //Drive Forward 
-  LDrive_Group.rotateFor(900*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(900*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(900*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(900*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   wait(500, msec);
   //Turn 90
-  LDrive_Group.rotateFor(-320*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(320*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-320*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(320*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   wait(500, msec);
   //Lift 4bar
-  fourBar.rotateFor(70*7, degrees, 75, velocityUnits::pct);
+  fourBar.spinFor(70*7, degrees, 75, velocityUnits::pct);
   // R4bar.rotateFor(70*7, degrees, 75, velocityUnits::pct, false);
   // L4bar.rotateFor(70*7, degrees, 75, velocityUnits::pct);
   //Drive Forward 
   TDrive_Group.spinFor(2000, msec, 40, velocityUnits::pct);
   wait(1000, msec);
   //Drop goal/ open claw
-  Claw4.rotateTo(-100*3, degrees, 75, velocityUnits::pct);
+  Claw4.spinFor(-100*3, degrees, 75, velocityUnits::pct);
   wait(500,msec);
   //Drive Back fromm plat
-  LDrive_Group.rotateFor(-350*GEAR_RATIO, degrees, 50, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-350*GEAR_RATIO, degrees, 50, velocityUnits::pct);
+  LDrive_Group.spinFor(-350*GEAR_RATIO, degrees, 50, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-350*GEAR_RATIO, degrees, 50, velocityUnits::pct);
   //Turn Right
   //Turn 90
-  LDrive_Group.rotateFor(-305*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(305*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-305*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(305*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   wait(500, msec);
   //Drop Pneumatic Goal
   Claw.set(false);
   wait(500, msec);
   //Drive forward 
-  LDrive_Group.rotateFor(1000*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(1000*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  fourBar.rotateFor(-120*7, degrees, 75, velocityUnits::pct);
+  LDrive_Group.spinFor(1000*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(1000*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  fourBar.spinFor(-120*7, degrees, 75, velocityUnits::pct);
   // R4bar.rotateFor(-120*7, degrees, 75, velocityUnits::pct, false);
   // L4bar.rotateFor(-120*7, degrees, 75, velocityUnits::pct);
   wait(2000, msec);
   //Drive forward slow
-  LDrive_Group.rotateFor(200*GEAR_RATIO, degrees, 20, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(200*GEAR_RATIO, degrees, 20, velocityUnits::pct);
+  LDrive_Group.spinFor(200*GEAR_RATIO, degrees, 20, velocityUnits::pct, false);
+  RDrive_Group.spinFor(200*GEAR_RATIO, degrees, 20, velocityUnits::pct);
   wait(1000, msec);
   //Close Claw/grab goal
-  Claw4.rotateTo(10*3, degrees, 75, velocityUnits::pct);
+  Claw4.spinTo(10*3, degrees, 75, velocityUnits::pct);
   wait(500, msec);
   //Backup
-  LDrive_Group.rotateFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(-500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   //Turn towards us
-  LDrive_Group.rotateFor(-305*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(305*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(-305*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(305*GEAR_RATIO, degrees, 40, velocityUnits::pct);
   //Drive towards us
-  LDrive_Group.rotateFor(1500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
-  RDrive_Group.rotateFor(1500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
+  LDrive_Group.spinFor(1500*GEAR_RATIO, degrees, 40, velocityUnits::pct, false);
+  RDrive_Group.spinFor(1500*GEAR_RATIO, degrees, 40, velocityUnits::pct);
 
 // //Lower Lift
 // R4bar.rotateFor(-100*3, degrees, 75, velocityUnits::pct, false);
